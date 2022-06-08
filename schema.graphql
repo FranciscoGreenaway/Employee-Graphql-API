@@ -1,0 +1,30 @@
+schema{
+    query: Query
+}
+
+type Employee {
+    id : ID!
+    department : String!
+    first_name : String!
+    last_name : String!
+    age : Int!
+    created_at : String!
+    birth_date : String!
+}
+
+type EmployeeResult {
+    success: Boolean!
+    errors: [String]
+    employee: Employee
+}
+
+type EmployeesResult {
+    success: Boolean!
+    errors: [String]
+    employees: [Employee]
+}
+
+type Query {
+    getEmployees: EmployeesResult!
+    getEmployeeByID(id: ID!): EmployeeResult!
+}
