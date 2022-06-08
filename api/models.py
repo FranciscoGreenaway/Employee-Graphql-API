@@ -7,7 +7,6 @@ class Employee(db.Model):
     department = db.Column(db.String)
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
-    age = db.Column(db.Integer)
     created_at = db.Column(db.Date)
     birth_date = db.Column(db.Date)
 
@@ -17,7 +16,6 @@ class Employee(db.Model):
             "department": self.department,
             "first_name": self.first_name,
             "last_name": self.last_name,
-            "age": self.age,
             "created_at": str(self.created_at.strftime('%m/%d/%Y')),
             "birth_date": str(self.birth_date.strftime('%m/%d/%Y'))
         }
