@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Handling heroku error
-uri = "postgres://sdbeisoj:r2otWxre-Q6Vj1CIsyO2auK53u38q92c@castor.db.elephantsql.com/sdbeisoj"
+uri = "postgres://********:********-***********************@castor.db.elephantsql.com/sdbeisoj"
 if uri and uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
